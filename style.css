@@ -1,0 +1,116 @@
+* { 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background: #f0f0f0;
+    text-align: center;
+}
+
+.game-banner {
+    width: 100%; 
+    max-width: 600px; 
+    margin-top: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 { 
+    margin-top: 20px; 
+}
+
+.game-container {
+    display: none;
+    width: 330px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    justify-content: center;
+}
+
+.tile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tile {
+    width: 150px;
+    height: 100px;
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+    border: 2px solid #333;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #e9e9e9;
+}
+
+#startBtn, #restartBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    margin-top: 20px;
+}
+
+#startBtn:hover, #restartBtn:hover {
+    background-color: #45a049;
+}
+
+#scoreBoard { 
+    font-weight: bold; 
+    margin-top: 10px; 
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+#modal-restart-btn {
+    margin-top: 15px;
+}

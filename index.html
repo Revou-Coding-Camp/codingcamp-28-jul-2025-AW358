@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match the Picture - 6 Ubin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <img src="images/banner/Match The Picture.png" alt="Banner Permainan" class="game-banner" />
+
+    <h1>Match the Picture - 6 Ubin</h1>
+    <div class="note">
+        ⏱ Permainan berlangsung selama <strong>60 detik</strong>. Geser ubin kiri dan kanan hingga membentuk satu gambar yang lengkap. <br />
+        🎯 Setiap gambar yang tersusun dengan benar akan menambah skor +1. Kumpulkan poin sebanyak-banyaknya! <br />
+        💻 Untuk pengalaman terbaik, disarankan untuk menggunakan komputer/laptop.
+    </div>
+
+    <button id="startBtn">Mulai Permainan</button>
+
+    <div class="game-container" id="game">
+        <div id="timer">Waktu: 60</div>
+        <div id="scoreBoard">Skor: 0</div>
+
+        <div class="grid">
+            <div class="tile-container">
+                <button class="shift-left" onclick="shift(0, -1)">⬅️</button>
+                <div class="tile" id="tile0"></div>
+                <button class="shift-right" onclick="shift(0, 1)">➡️</button>
+            </div>
+            <div class="tile-container">
+                <button class="shift-left" onclick="shift(1, -1)">⬅️</button>
+                <div class="tile" id="tile1"></div>
+                <button class="shift-right" onclick="shift(1, 1)">➡️</button>
+            </div>
+            <div class="tile-container">
+                <button class="shift-left" onclick="shift(2, -1)">⬅️</button>
+                <div class="tile" id="tile2"></div>
+                <button class="shift-right" onclick="shift(2, 1)">➡️</button>
+            </div>
+            <div class="tile-container">
+                <button class="shift-left" onclick="shift(3, -1)">⬅️</button>
+                <div class="tile" id="tile3"></div>
+                <button class="shift-right" onclick="shift(3, 1)">➡️</button>
+            </div>
+            <div class="tile-container">
+                <button class="shift-left" onclick="shift(4, -1)">⬅️</button>
+                <div class="tile" id="tile4"></div>
+                <button class="shift-right" onclick="shift(4, 1)">➡️</button>
+            </div>
+            <div class="tile-container">
+                <button class="shift-left" onclick="shift(5, -1)">⬅️</button>
+                <div class="tile" id="tile5"></div>
+                <button class="shift-right" onclick="shift(5, 1)">➡️</button>
+            </div>
+        </div>
+        
+        <button id="restartBtn" style="display:none;">Ulangi Permainan</button>
+    </div>
+
+    <div id="game-over-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-title">Waktu Habis!</h2>
+            <p id="modal-score">Skor akhir: 0</p>
+            <button id="modal-restart-btn">Ulangi Permainan</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
